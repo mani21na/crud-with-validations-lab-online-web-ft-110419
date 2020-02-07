@@ -21,6 +21,7 @@
                 <td><%= song.artist_name %></td>
                 <td><%= song.genre %></td>
             </tr>
+            <%= link_to "Delete", song, method: :delete, data: { confirm: "Are you sure?" } %>
         <% end %>
     </tbody>
 </table>
