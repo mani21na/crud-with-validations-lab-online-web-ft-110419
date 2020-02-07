@@ -1,6 +1,5 @@
 class Song < ApplicationRecord
-  validates :title, presence: true, uniqueness: { scope: :year,
-    message: "should happen once per year" }
+  validates :title, presence: true, uniqueness: { scope: :year, message: "should happen once per year" }
   validates :released, inclusion: { in: %w[true false] }
   validates :release_year, presence: true, unless: -> { released.value == false }, release_year_cannot_be_in_the_past:
   validates :artist_name, presence: true
