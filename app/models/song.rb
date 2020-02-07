@@ -5,5 +5,4 @@ class Song < ApplicationRecord
   validates :artist_name, presence: true
   validates :release_year, presence: true, unless: -> { released.value == false }
   validates_with ReleaseYearValidator
-
 end
